@@ -3,7 +3,7 @@ function ImageBox({ image, word }) {
     return (
         <>
             <div className="image-box">
-                <img id="image" src={`${window.location.origin}/img/${image}`} alt={`image of ${word}`} />
+                <img id="image" src={`./img/${image}`} alt={`image of ${word}`} />
             </div>
         </>
     );
