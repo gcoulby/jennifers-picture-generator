@@ -11,8 +11,8 @@ function App() {
     const [active, setActive] = useState(false);
     const [file, setFile] = useState("");
     const [word, setWord] = useState("");
-    let xylophone = new Audio(`${window.location.origin}/sounds/Xylophone.wav`);
-    let blips = new Audio(`${window.location.origin}/sounds/Blips.wav`);
+    let xylophone = new Audio(`./sounds/Xylophone.wav`);
+    let blips = new Audio(`./sounds/Blips.wav`);
 
     const startGame = (start, next) => {
         const randomFile = fileList[Math.floor(Math.random() * fileList.length)];

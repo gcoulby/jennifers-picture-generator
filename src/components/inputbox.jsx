@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CharBox from "./charBox";
 function InputBox({ word, setNextWord }) {
-    let error = new Audio(`${window.location.origin}/sounds/Error.wav`);
+    let error = new Audio(`./sounds/Error.wav`);
     // const [wordLength, setWordLength] = useState(word.length);
 
     const [chars, setChars] = useState([]);
