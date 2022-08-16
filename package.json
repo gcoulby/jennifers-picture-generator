@@ -1,5 +1,6 @@
 {
   "name": "jennifers-picture-generator",
+  "homepage": "https://gcoulby.github.io/jennifers-picture-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
