@@ -1,0 +1,51 @@
+@import "inputbox";
+
+body {
+    font-family: "Comic Neue", cursive;
+    background: #81d8fb;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+button {
+    margin: auto;
+    display: block;
+    background: #ff75ee;
+    border: none;
+    color: white;
+    padding: 0.5em 2em;
+    font-size: 2em;
+    border-radius: 40px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#image {
+    height: 50vh;
+    display: block;
+    margin: 0 auto 4em auto;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+#word {
+    // font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+    color: #b13ca3;
+}
