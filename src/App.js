@@ -22,11 +22,9 @@ function App() {
         files.splice(index, 1);
         if (files.length > 0) {
             setFileList(files);
-            console.log(files.length);
         } else {
             setFileList(fileListJson);
         }
-        // console.log(randomFile);
         setFile(randomFile);
         const word = randomFile.substring(0, randomFile.lastIndexOf(".")) || randomFile;
         setWord(word);
