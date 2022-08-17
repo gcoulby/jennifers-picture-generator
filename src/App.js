@@ -3,11 +3,12 @@ import "./App.css";
 import InputBox from "./components/inputbox";
 import "./styles/css-compiled/main.css";
 import { useEffect, useState } from "react";
-import fileList from "./file-list.json";
+import fileListJson from "./file-list.json";
 import ImageBox from "./components/imageBox";
 import WordTitle from "./components/wordTitle";
 
 function App() {
+    const [fileList, setFileList] = useState(fileListJson);
     const [active, setActive] = useState(false);
     const [file, setFile] = useState("");
     const [word, setWord] = useState("");
@@ -15,7 +16,16 @@ function App() {
     let blips = new Audio(`./sounds/Blips.wav`);
 
     const startGame = (start, next) => {
-        const randomFile = fileList[Math.floor(Math.random() * fileList.length)];
+        const files = [...fileList];
+        var index = Math.floor(Math.random() * files.length);
+        const randomFile = files[index];
+        files.splice(index, 1);
+        if (files.length > 0) {
+            setFileList(files);
+            console.log(files.length);
+        } else {
+            setFileList(fileListJson);
+        }
         // console.log(randomFile);
         setFile(randomFile);
         const word = randomFile.substring(0, randomFile.lastIndexOf(".")) || randomFile;
